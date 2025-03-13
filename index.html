@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Button Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Click the Button!</h1>
+        <p>Click the button as many times as you can in 10 seconds!</p>
+        <button id="clickButton">Click Me!</button>
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+        <p>Time Left: <span id="timer">10</span> seconds</p>
+        <p id="countdown"></p>
+        <button id="restartButton" style="display: none;">Restart Game</button>
+
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+            <p>Select Theme:</p>
+            <button id="themeDefault">Default</button>
+            <button id="themeSpace">Space</button>
+            <button id="themeJungle">Jungle</button>
+            <button id="themeUnderwater">Underwater</button>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
