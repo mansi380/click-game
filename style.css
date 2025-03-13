@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Chewy', cursive;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Space Theme */
+body.space {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Jungle Theme */
+body.jungle {
+    background: linear-gradient(135deg, #556b2f, #8fbc8f);
+}
+
+/* Underwater Theme */
+body.underwater {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Button Styling */
+#clickButton {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-family: 'Chewy', cursive;
+    cursor: pointer;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: bounce 0.5s infinite alternate;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the button */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+#clickButton:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6);
+}
+
+@keyframes bounce {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -60%); /* Bounce up slightly */
+    }
+}
+
+/* Countdown Styling */
+#countdown {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Restart Button */
+#restartButton {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Chewy', cursive;
+    background-color: #6b5b95;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(107, 91, 149, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#restartButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(107, 91, 149, 0.6);
+}
+
+/* Theme Selector */
+.theme-selector {
+    margin-top: 20px;
+}
+
+.theme-selector button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Chewy', cursive;
+    background-color: #6b5b95;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-selector button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(107, 91, 149, 0.6);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    animation: confetti-fall 2s linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
